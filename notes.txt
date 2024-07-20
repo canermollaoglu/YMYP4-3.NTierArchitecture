@@ -1,0 +1,33 @@
+N-TIER ARCHITECTURE (Katmanlý Mimari)
+
+Bir yazýlým mimarisi modelidir ve bir uygulamanýn mantýksal olarak ayrýlmýþ, baðýmsýz katmanlara bölünmesi anlamýna gelir. Bu mimari model uygulamanýn daha iyi yönetilmesini, ölçeklenebilir olmasýný ve bakýmýnýn kolaylaþmasýný saðlar. En yaygýn kullanýlan n-tier mimari türü 4 katmanlý mimaridir: (UI, BLL, DAL, Entity)
+
+Proje Referanslarý:
+
+UI
+	+Business
+	+Entities
+
+DATA ACCESS
+	+Entities
+
+BUSINESS
+	+Data Access
+	+Entities
+
+
+	EF CORE CODE FIRST ENTEGRASYONU:
+	DATA ACCESS LAYER Kurulacak Paketler:
+	install-package Microsoft.EntityFrameWorkCore
+	install-package Microsoft.EntityFrameWorkCore.Tools
+	install-package Microsoft.EntityFrameWorkCore.SqlServer
+
+	UI LAYER Kurulacak Paket:
+	install-package Microsoft.EntityFrameWorkCore.Design
+
+	15 DK
+
+	1-IRepository	
+	2-Generic Repository
+	3-CategoryRepository
+
